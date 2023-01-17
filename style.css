@@ -1,6 +1,16 @@
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+  --space-unit: 8px;
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary-light: hsl(45deg, 100%, 50%);
+  --color-secondary-dark: hsl(45deg, 100%, 40%);
+  --color-black: hsl(0deg, 0%, 0%);
+  --color-verydark: hsl(0deg, 0%, 10%);
+  --color-dark: hsl(0deg, 0%, 30%);
+  --color-medium: hsl(0deg, 0%, 40%);
+  --color-light: hsl(0deg, 0%, 60%);
+  --color-white: hsl(0deg, 0%, 100%);
 }
 
 html,
@@ -9,4 +19,65 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+strong {
+  color: var(--color-primary);
+}
+
+main {
+  background-color: var(--color-medium);
+  border-top: var(--space-unit) solid var(--color-light);
+}
+
+.max-width-wrapper {
+  width: fit-content;
+  padding-block: calc(var(--space-unit) * 9);
+  margin-inline: auto;
+}
+
+.max-width-wrapper > div {
+  max-width: 800px;
+  min-width: 390px;
+  background-color: var(--color-white);
+  padding-inline: calc(var(--space-unit) * 3);
+  padding-block-start: var(--space-unit);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-block-end: calc(var(--space-unit) * 6);
+}
+
+.indented-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  width: 400px;
+  margin-block: 0;
+  margin-inline-start: calc(var(--space-unit) * -4);
+  background-color: var(--color-secondary-light);
+  border-bottom: var(--space-unit) solid var(--color-secondary-dark);
+}
+
+.card {
+  border-bottom: var(--space-unit) solid var(--color-light);
+}
+
+.intro-chunk {
+  width: 800px;
+}
+
+.intro-chunk p {
+  max-width: 415px;
+}
+
+em {
+  font-style: normal;
+}
